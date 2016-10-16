@@ -2,7 +2,7 @@
 public class FrequencyAnalysisAnySize {
 
 	public static void main(String[] args) {
-		System.out.println(vigenereCipherCrack("spnklxhwsrcitjwtgftew", 5, FinalCipher.ALPHABET));
+		System.out.println(vigenereCipherCrack("spnklxhwsrcitjwtgftew", 5, Cipher.ALPHABET));
 
 	}
 	

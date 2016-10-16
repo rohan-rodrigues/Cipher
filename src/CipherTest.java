@@ -11,7 +11,7 @@ public class CipherTest {
 	public void rotationCipherEncryptBy3() {
 		String plaintext = "the quick brown fox jumped over the lazy dogs";
 		String correctCipherText = "wkh!txlfn!eurzq!irA!mxpshg!ryhu!wkh!odCB!grjv";
-		String testCipherText = Cipher.rotationCipherEncrypt(plaintext, 3, ALPHABET);
+		String testCipherText = OldCipher.rotationCipherEncrypt(plaintext, 3, ALPHABET);
 		assertEquals(testCipherText, correctCipherText);
 	}
 	
@@ -19,7 +19,7 @@ public class CipherTest {
 	public void rotationCipherDecryptBy3() {
 		String plaintext = "the quick brown fox jumped over the lazy dogs";
 		String correctCipherText = "wkh!txlfn!eurzq!irA!mxpshg!ryhu!wkh!odCB!grjv";
-		String testPlainText = Cipher.rotationCipherDecrypt(correctCipherText, 3, ALPHABET);
+		String testPlainText = OldCipher.rotationCipherDecrypt(correctCipherText, 3, ALPHABET);
 		assertEquals(testPlainText, plaintext);
 	}
 	
@@ -27,7 +27,7 @@ public class CipherTest {
 	public void rotationCipherDecryptBy100() {
 		String plaintext = "the quick brown fox jumped over the lazy dogs";
 		String correctCipherText = "KyvaHLztBasIFNEawFOaALDGvuaFMvIaKyvaCrQPauFxJ";
-		String testPlainText = Cipher.rotationCipherDecrypt(correctCipherText, 100, ALPHABET);
+		String testPlainText = OldCipher.rotationCipherDecrypt(correctCipherText, 100, ALPHABET);
 		assertEquals(testPlainText, plaintext);
 	}
 	
@@ -35,7 +35,7 @@ public class CipherTest {
 	public void rotationCipherEncryptBy100() {
 		String plaintext = "the quick brown fox jumped over the lazy dogs";
 		String correctCipherText = "KyvaHLztBasIFNEawFOaALDGvuaFMvIaKyvaCrQPauFxJ";
-		String testCipherText = Cipher.rotationCipherEncrypt(plaintext, 100, ALPHABET);
+		String testCipherText = OldCipher.rotationCipherEncrypt(plaintext, 100, ALPHABET);
 		assertEquals(testCipherText, correctCipherText);
 	}
 	
@@ -43,7 +43,7 @@ public class CipherTest {
 	public void rotationCipherEncryptBy3CapsWithPunctuation() {
 		String plaintext = "\"THE\n\rQUICK\nBROWN FOX. JUMPED OVER THE LAZY DOGS!\"";
 		String correctCipherText = "]WKHbcTXLFNbEURZQ!IR0 !MXPSHG!RYHU!WKH!OD21!GRJV/]";
-		String testCipherText = Cipher.rotationCipherEncrypt(plaintext, 3, ALPHABET);
+		String testCipherText = OldCipher.rotationCipherEncrypt(plaintext, 3, ALPHABET);
 		assertEquals(testCipherText, correctCipherText);
 	}
 	
@@ -51,7 +51,7 @@ public class CipherTest {
 	public void rotationCipherDecryptBy3CapsWithPunctuation() {
 		String plaintext = "\"THE\n\rQUICK\nBROWN FOX. JUMPED OVER THE LAZY DOGS!\"";
 		String correctCipherText = "]WKHbcTXLFNbEURZQ!IR0 !MXPSHG!RYHU!WKH!OD21!GRJV/]";
-		String testPlainText = Cipher.rotationCipherDecrypt(correctCipherText, 3, ALPHABET);
+		String testPlainText = OldCipher.rotationCipherDecrypt(correctCipherText, 3, ALPHABET);
 		assertEquals(testPlainText, plaintext);
 	}
 	
@@ -59,7 +59,7 @@ public class CipherTest {
 	public void rotationCipherDecryptBy100CapsWithPunctuation() {
 		String plaintext = "\"THE\n\rQUICK\nBROWN FOX. JUMPED OVER THE LAZY DOGS!\"";
 		String correctCipherText = "c,YVpq7.ZT1pS85)4aW5 :a0.36VUa5(V8a,YVa2R\"'aU5X9dc";
-		String testPlainText = Cipher.rotationCipherDecrypt(correctCipherText, 100, ALPHABET);
+		String testPlainText = OldCipher.rotationCipherDecrypt(correctCipherText, 100, ALPHABET);
 		assertEquals(testPlainText, plaintext);
 	}
 	
@@ -67,7 +67,7 @@ public class CipherTest {
 	public void rotationCipherEncryptBy100CapsWithPunctuation() {
 		String plaintext = "\"THE\n\rQUICK\nBROWN FOX. JUMPED OVER THE LAZY DOGS!\"";
 		String correctCipherText = "c,YVpq7.ZT1pS85)4aW5 :a0.36VUa5(V8a,YVa2R\"'aU5X9dc";
-		String testCipherText = Cipher.rotationCipherEncrypt(plaintext, 100, ALPHABET);
+		String testCipherText = OldCipher.rotationCipherEncrypt(plaintext, 100, ALPHABET);
 		assertEquals(testCipherText, correctCipherText);
 	}
 }
